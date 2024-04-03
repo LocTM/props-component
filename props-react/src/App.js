@@ -9,9 +9,9 @@ import {Edit} from "./components/edit";
 function App() {
   return (
    <>
-       <Create></Create>
-       <Delete></Delete>
-       <Edit></Edit>
+       <Create name={"Createeeee"} ></Create>
+       <Delete name={"Deleteeeee"}></Delete>
+       <Edit name={"Edittttt"}></Edit>
      <Welcome name={"ADMIN"}/>
        <div className="container">
            <h2>React CRUD Tutorial</h2>

@@ -1,7 +1,7 @@
-export function Delete (){
+export function Delete (props){
     return(
         <>
-            <h1>DAY LA TRANG DELETE</h1>
+            <h1>DAY LA TRANG DELETE {props.name}</h1>
         </>
     )
 }
