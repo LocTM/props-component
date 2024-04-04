@@ -10,6 +10,7 @@ export function FAddComponent(props) {
             <button onClick={tang}>TANG</button>
             <h2>COUNT: {number}</h2>
             <button onClick={giam}>GIAM</button>
+            <h2>{props.n1+props.n2}</h2>
         </>
     )
 }
