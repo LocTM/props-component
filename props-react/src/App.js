@@ -8,22 +8,32 @@ import {Edit} from "./components/edit";
 import AddComponent from "./components/AddComponent";
 import {FAddComponent} from "./components/FAddComponent";
 import {ChangeBackgroundColor} from "./components/ChangeBackgroundColor";
+import Hello from "./components/Hello";
+import {Component} from "react";
 
-function App() {
-  return (
-   <>
-     {/*  <Create name={"Createeeee"} ></Create>*/}
-     {/*  <Delete name={"Deleteeeee"}></Delete>*/}
-     {/*  <Edit name={"Edittttt"}></Edit>*/}
-     {/*<Welcome name={"ADMIN"}/>*/}
-     {/*  <div className="container">*/}
-     {/*      <h2>React CRUD Tutorial</h2>*/}
-     {/*  </div>*/}
-       <AddComponent n1={5} n2={2}></AddComponent>
-       <FAddComponent n1={7} n2={3}></FAddComponent>
-<ChangeBackgroundColor></ChangeBackgroundColor>
-   </>
-  );
+export default class App extends Component{
+    constructor(props) {
+        super(props);
+        this.state={
+            display: true
+        }
+    }
+    delete = () => {
+        this.setState({display: false})
+    }
+    render() {
+        let comp;
+        if (this.state.display){
+            comp = <Hello />
+        }
+        return(
+            <div style={{ textAlign: 'center' }}>
+                {comp}
+                <button onClick={this.delete}>
+                    Delete the component
+                </button>
+            </div>
+        );
+    }
 }
 
-export default App;
